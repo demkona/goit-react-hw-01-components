@@ -1,15 +1,7 @@
-import user from 'json/user.json'
-
-//  <Profile
-//   username={user.username}
-//   tag={user.tag}
-//   location={user.location}
-//   avatar={user.avatar}
-//   stats={user.stats}
-// /> 
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
+
         <div className="profile">
             <div className="description">
                 <img
@@ -23,20 +15,21 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
             </div>
 
 
-            {/* <ul className="stats">
+            <ul className="stats">
                 <li>
-                    <span className="label">{stats.followers}</span>
-                    <span className="quantity">1000</span>
+                    <span className="label"></span>
+                    <span className="quantity">{stats.followers}</span>
                 </li>
                 <li>
-                    <span className="label">{stats.Views}</span>
-                    <span className="quantity">2000</span>
+                    <span className="label"></span>
+                    <span className="quantity">{stats.views}</span>
+
                 </li>
                 <li>
-                    <span className="label">{stats.Likes}</span>
-                    <span className="quantity">3000</span>
+                    <span className="label"></span>
+                    <span className="quantity">{stats.likes}</span>
                 </li>
-            </ul> */}
+            </ul>
 
         </div>
     )
