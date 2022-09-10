@@ -1,4 +1,35 @@
+.profile {
+  width: 500px;
+  background-color: rgb(210, 255, 198);
+  margin: 0 auto;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
 .avatar {
-  height: 100px;
+  width: 150px;
+  border: black solid 2px;
   border-radius: 50px;
+}
+
+.name {
+  font-size: 35px;
+}
+
+.tag {
+  color: gray;
+}
+
+.location {
+  color: gray;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
 }
