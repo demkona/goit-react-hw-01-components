@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-import css from '../FriendList/FriendList.module.css';
+import css from '../TransactionHistory/TransactionHistory.module.css';
 
 export const TransactionHistory = ({ items }) => {
     return (
@@ -13,13 +13,12 @@ export const TransactionHistory = ({ items }) => {
             </thead>
             {items.map(({ id, type, amount, currency }) => (
                 <tbody key={id}>
-                    <tr>
+                    <tr className={css.tabRow}>
                         <td>{type}</td>
                         <td>{amount}</td>
                         <td>{currency}</td>
                     </tr>
                 </tbody>))}
-
         </table>
     )
 }

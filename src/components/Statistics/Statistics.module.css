@@ -1,0 +1,28 @@
+.statistics {
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.295);
+  margin: 30px auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px auto;
+}
+
+.statList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}

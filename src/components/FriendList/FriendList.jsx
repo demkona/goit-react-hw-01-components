@@ -3,13 +3,13 @@ import css from '../FriendList/FriendList.module.css';
 
 export const FriendList = ({ friends }) => {
     return (
-        <div>{ }
-            <ul className="friend-list">
+        <div>
+            <ul className={css.friendList}>
                 {friends.map(({ avatar, name, isOnline, id }) => (
                     <li className={css.item} key={id}>
-                        <span className="status"></span>
-                        <img className="avatar" src={avatar} alt={name} width="48" />
-                        <p className="name">{name}</p>
+                        <span className={`${css.status} ${css[isOnline]}`}></span>
+                        <img className={css.avatar} src={avatar} alt={name} width="48" />
+                        <p className={css.name}>{name}</p>
                     </li>
                 ))}
             </ul>
