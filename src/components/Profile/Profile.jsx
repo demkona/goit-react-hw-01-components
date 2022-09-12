@@ -16,18 +16,12 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <p className={css.location}>{location}</p>
             </div>
             <ul className={css.stats}>
-                <li className={css.itemList}>
-                    <span className={css.label}>followers</span>
-                    <span className={css.quantity}>{stats.followers}</span>
-                </li>
-                <li className={css.itemList}>
-                    <span className={css.label}>views</span>
-                    <span className={css.quantity}>{stats.views}</span>
-                </li>
-                <li className={css.itemList}>
-                    <span className={css.label}>likes</span>
-                    <span className={css.quantity}>{stats.likes}</span>
-                </li>
+                {Object.entries(stats).map(([key, value]) => (
+                    <li className={css.itemList} key={key}>
+                        <span className={css.label}>{key}</span>
+                        <span className={css.quantity}>{value}</span>
+                    </li>
+                ))}
             </ul>
         </div>
     )
@@ -38,9 +32,9 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
-        followers: PropTypes.number.isRequired,
-        views: PropTypes.number.isRequired,
-        likes: PropTypes.number.isRequired
-    })
+    stats: PropTypes.shape({
+        followers: PropTypes.number,
+        views: PropTypes.number,
+        likes: PropTypes.number,
+    }).isRequired,
 }
