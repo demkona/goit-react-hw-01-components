@@ -6,7 +6,7 @@
 
 .transactionHistory td,
 .transactionHistory th {
-  border: 1px solid #030303;
+  border: 1px solid #b9b9b9;
   padding: 8px;
 }
 
@@ -18,5 +18,5 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.295);
+  background-color: rgb(167, 176, 255);
 }
